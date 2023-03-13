@@ -27,12 +27,12 @@ const DUMMY_EVENTS = [
         location: 'My Street 12, 10115 Broke City',
         date: '2022-04-10',
         image: 'images/extrovert-event.jpg',
-        isFeatured: true,
+        isFeatured: false,
     },
 ];
 
-export function getFeaturedEvents() {
-    return DUMMY_EVENTS.filter((event) => event.isFeatured);
+export function getFeaturedEvents(events = DUMMY_EVENTS) {
+    return events.filter((event) => event.isFeatured);
 }
 
 export function getAllEvents() {
